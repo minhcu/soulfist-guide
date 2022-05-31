@@ -1,0 +1,478 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+:root {
+  --primary: #FB35F5;
+  --info: #17a2b8;
+  --success: #28a745;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --background: #1f2251;
+  --text-background: #171941;
+  --default: #ffc107;
+  --gray100: #f6f9fc;
+  --gray200: #e9ecef;
+  --gray300: #e3e3e3;
+  --gray400: #ced4da;
+  --gray500: #adb5bd;
+  --gray600: #6c757d;
+  --gray700: #525f7f;
+  --gray800: #32325d;
+  --gray900: #212529;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: left;
+  background: var(--background);
+  position: relative;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+  display: inline-block;
+}
+
+p, ul, li {
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  font-family: inherit;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2.0265rem;
+  line-height: 1.05;
+}
+
+h2 {
+  font-size: 2.6875rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.4375rem;
+  line-height: 1.4em;
+}
+
+h4 {
+  font-size: 1.0625rem;
+}
+
+.text--primary {
+  color: var(--primary);
+}
+.text--info {
+  color: var(--info);
+}
+.text--success {
+  color: var(--success);
+}
+.text--warning {
+  color: var(--warning);
+}
+.text--danger {
+  color: var(--danger);
+}
+
+.badge--primary {
+  background-color: var(--primary);
+}
+.badge--info {
+  background-color: var(--info);
+}
+.badge--success {
+  background-color: var(--success);
+}
+.badge--warning {
+  background-color: var(--warning);
+}
+.badge--danger {
+  background-color: var(--danger);
+}
+
+.nav .nav__item, .tab .tab__nav__link {
+  transition: all 0.3s ease 0s;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  padding-top: 70px;
+}
+.section .wrapper {
+  display: flex;
+}
+
+.footer {
+  padding: 40px 0;
+  margin-top: 70px;
+  border-top: 1px solid #435db5;
+  background: radial-gradient(ellipse at bottom, #292d61 30%, #171941 80%);
+  color: #fff;
+}
+.footer a {
+  padding: 0.5rem;
+  color: var(--primary);
+}
+.footer a i {
+  font-size: 2rem;
+}
+
+.out-bound-link {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.block {
+  margin-bottom: 1rem;
+}
+.block--center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.block--margin-right {
+  margin-right: 1rem;
+}
+.block__engraving h3 {
+  margin: 0;
+}
+.block__engraving p {
+  margin: 0;
+}
+.block__engraving .badge {
+  margin-right: 5px;
+}
+.block__engraving img {
+  width: 64px;
+  height: 64px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e66ad2;
+  margin: 10px 0;
+}
+
+.text {
+  z-index: 999;
+  font-size: inherit;
+}
+.text--center {
+  text-align: center;
+}
+.text--underline {
+  text-decoration: underline;
+}
+.text__brand, .text__title, .text__sub-title {
+  color: #fff !important;
+}
+.text__brand {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+}
+.text__title {
+  font-size: 5em;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.text__sub-title {
+  font-size: 2em;
+  text-transform: capitalize;
+}
+.text__table {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100px 200px;
+  justify-content: center;
+  row-gap: 1em;
+}
+
+.badge {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  color: #fff;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.62475rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+}
+
+.alert {
+  border: 0;
+  padding: 0.9rem 1.15rem;
+  margin-bottom: 1rem;
+  border-radius: 0.2857rem;
+}
+.alert .wrapper,
+.alert .wrapper .item {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+}
+.alert img {
+  width: 40px;
+  height: 40px;
+}
+.alert--primary {
+  color: #fff;
+  background-color: #e66ad2;
+}
+
+.nav {
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000;
+  background-color: var(--primary);
+}
+.nav--fixed-top {
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+.nav--transparent {
+  background-color: transparent !important;
+  padding-top: 25px;
+}
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__icon {
+  display: flex;
+}
+.nav__item {
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
+  padding: 0.5rem;
+}
+.nav__item a {
+  color: inherit;
+}
+.nav__item a i {
+  color: inherit;
+}
+.nav__item:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.head {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  z-index: 999;
+}
+.head::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  background-image: url(https://static1.thegamerimages.com/wordpress/wp-content/uploads/2022/01/Lost-Ark-Soul-Fist-Header.jpg);
+  background-size: cover;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.head::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.toc {
+  position: sticky;
+  position: -webkit-sticky;
+  padding-top: 100px;
+  top: 0;
+}
+.toc__link {
+  padding: 0.25rem 1.25rem;
+  color: #fff;
+}
+.toc__link.active {
+  padding-left: 1.125rem;
+  color: var(--primary);
+  border-left: 2px solid var(--primary);
+  font-weight: 600;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  background-image: url(https://demos.creative-tim.com/blk-design-system/assets/img/dots.png);
+  background-size: contain;
+  gap: 10px;
+}
+.body .content {
+  color: rgba(255, 255, 255, 0.8);
+}
+.body .content h2 {
+  color: #ffffff;
+}
+.body .content p,
+.body .content ul,
+.body .content li {
+  color: inherit;
+}
+
+.side-bar {
+  padding: 1rem;
+  margin-left: 10px;
+}
+
+.tab__header {
+  padding: 0.9375rem 0.9375rem 0;
+}
+.tab__body {
+  padding: 0.9375rem;
+}
+.tab__nav {
+  display: flex;
+  justify-content: center;
+  flex: wrap;
+  padding: 0.5rem 0.7rem;
+}
+.tab__nav__link {
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-right: 0.3125rem;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  text-transform: capitalize;
+}
+.tab__nav__link:hover {
+  border-color: #191f31;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+.tab__nav__link.active {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.tab__pane {
+  display: none;
+}
+.tab__pane.show {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.table {
+  margin: auto;
+  border-spacing: 1rem;
+}
+.table .row {
+  border: 1px solid var(--primary);
+}
+.table .wrapper,
+.table .tripod {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+}
+.table .cell__head, .table .cell__level {
+  text-align: center;
+}
+.table .cell__level {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: #e66ad2;
+}
+.table img {
+  width: 40px;
+  height: 40px;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+}
+.grid--2col {
+  grid-template-columns: 1fr 1fr;
+}
+.grid--align-center {
+  align-items: center;
+}
+
+.card .table {
+  width: 100%;
+  table-layout: fixed;
+}
+.card .table .wrapper {
+  justify-content: center;
+}
+.card .list {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+.card .list__item {
+  list-style-type: disc;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 560px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
