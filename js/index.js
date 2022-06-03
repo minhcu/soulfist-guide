@@ -22,7 +22,7 @@ ToC.forEach(function (el) {
 
 function moveToTab(el) {
 
-    ToCScrollActive = false;
+    
     const btn = el.currentTarget;
 
     ToC.forEach(function (el) {
@@ -30,9 +30,9 @@ function moveToTab(el) {
     });
 
     btn.classList.add("active");
+    ToCScrollActive = false;
 
 }
-
 
 function ToCActiveOnScroll() {
     const currentPosition = document.documentElement.scrollTop;
@@ -40,14 +40,14 @@ function ToCActiveOnScroll() {
     const currentHeadingPosition = currentActivedTOChref ? document.querySelector('#' + currentActivedTOChref).offsetTop : 0
 
     // Round up because 0.1+0.2 does not equal to 0.3
-    if (Math.round(currentHeadingPosition) == Math.round(currentPosition)) {
+    if (Math.round(currentHeadingPosition) == Math.round(currentPosition)+100) {
         ToCScrollActive = true;
     }
 
     if (ToCScrollActive) {
         headings.forEach((e, i) => {
             // add 20px in too fix error jumping between overview and keyterms
-            if (e.offsetTop <= currentPosition + 10) {
+            if (e.offsetTop <= currentPosition+130) {
                 if (document.querySelector('.toc__link.active')) {
                     document.querySelector('.toc__link.active').classList.remove('active');
                 }
