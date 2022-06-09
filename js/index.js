@@ -1,18 +1,14 @@
-// Change color on scroll
-window.onscroll = () => {
-    // Nav color on scroll
+// Change header color on scroll
+const headerColorChangeOnScroll = () => {
     const nav = document.querySelector('.nav');
     const className = "nav--transparent";
     const scrollPx = 200; // Color change after scroll over {scrollPx} pixel
 
     window.scrollY > scrollPx ? nav.classList.remove(className) : nav.classList.add(className);
-
-    // ToC color on scroll
-    ToCActiveOnScroll();
-};
-
-const ToC = document.querySelectorAll('.toc__link');
-const headings = document.querySelectorAll('h2');
+}
+// ----------------------------------------------------------------------------------------------
+let ToC = document.querySelectorAll('.toc__link');
+let headings = document.querySelectorAll('h2');
 
 let ToCScrollActive = true;
 
@@ -22,7 +18,6 @@ ToC.forEach(function (el) {
 
 function moveToTab(el) {
 
-    
     const btn = el.currentTarget;
 
     ToC.forEach(function (el) {
@@ -90,6 +85,8 @@ tabLink.forEach(function (el) {
 });
 
 function openTab(el) {
+    ToC = document.querySelectorAll('.toc__link');
+    headings = document.querySelectorAll('h2');
     el.preventDefault();
     const btn = el.currentTarget;
     const attr = btn.getAttribute("href");
@@ -110,4 +107,13 @@ function openTab(el) {
 window.onload = function () {
     addIDandHref();
     addActive();
+    ToCActiveOnScroll();
+};
+
+window.onscroll = () => {
+    // Change header color
+    headerColorChangeOnScroll();
+
+    // ToC color on scroll
+    ToCActiveOnScroll();
 };

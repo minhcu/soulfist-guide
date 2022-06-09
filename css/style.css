@@ -419,6 +419,9 @@ html {
   border-spacing: 0 !important;
 }
 .tab__pane.show {
+  display: block;
+}
+.tab__pane.show .pane--grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
